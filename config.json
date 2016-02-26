@@ -1,0 +1,20 @@
+{
+	"site": "_site/",
+	"source": {
+		"dir": "_source/",
+		"sass": "_source/_assets/sass/",
+		"js": "_source/_assets/js/",
+		"img": "_source/_assets/images/"
+	},
+	"dest": {
+		"css": "_source/css/",
+		"js": "_source/js/"
+	},
+	"deploy": {
+		"css": "_site/css/",
+		"js": "_site/js/"
+	},
+	"autoprefixer_browsers": [
+		"last 2 versions"
+	]
+}
