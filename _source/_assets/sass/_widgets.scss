@@ -1,0 +1,10 @@
+.label {
+	font-weight: normal;
+	&.label-virgo {
+		background-color: $color3;
+	    color: #fff;
+	    &:hover {
+	    	background-color: $color-main;
+	    };
+	}
+}

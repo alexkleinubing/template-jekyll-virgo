@@ -1,0 +1,18 @@
+/* Coolors Exported Palette - coolors.co/2c3e50-c33c54-37718e-8ee3ef-aef3e7 */
+$color1: #2c3e50; //rgba(44, 62, 80, 100)
+$color2: #c33c54; //rgba(195, 60, 84, 100)
+$color3: #37718e; //rgba(55, 113, 142, 100)
+$color4: #8ee3ef; //rgba(142, 227, 239, 100)
+$color5: #aef3e7; //rgba(174, 243, 231, 100)
+
+// fonts
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700);
+$font-heading: 'Ubuntu', Arial, serif;
+$font-body: 'Raleway', Arial, sans-serif;
+$color-heading: #444;
+$color-body: #666;
+
+// configs
+$sidebar-width: 600px;
+$color-main: $color1;
