@@ -10,6 +10,10 @@ url:              "http://yourdomain.com" # the base hostname & protocol for you
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# General options
+comments:         true
+disqus-shortname: jekylltemplates
+
 # Build settings
 source:           _source
 destination:      _site

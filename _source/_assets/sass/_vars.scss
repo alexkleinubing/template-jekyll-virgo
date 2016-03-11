@@ -1,18 +1,29 @@
-/* Coolors Exported Palette - coolors.co/2c3e50-c33c54-37718e-8ee3ef-aef3e7 */
-$color1: #2c3e50; //rgba(44, 62, 80, 100)
-$color2: #c33c54; //rgba(195, 60, 84, 100)
-$color3: #37718e; //rgba(55, 113, 142, 100)
-$color4: #8ee3ef; //rgba(142, 227, 239, 100)
-$color5: #aef3e7; //rgba(174, 243, 231, 100)
+/* Coolors Exported Palette - coolors.co/16a085-246a73-d7263d-7d1128-ffffff */
+$color1: #d7263d; //rgba(215, 38, 61, 100)
+$color2: #7d1128; //rgba(125, 17, 40, 100)
+$color3: #246a73; //rgba(36, 106, 115, 100)
+$color4: #16a085; //rgba(22, 160, 133, 100)
+$color5: #ffffff; //rgba(255, 255, 255, 100)
+
+$color-bg: #F2F2F2;
+
+$color-main: $color1;
+$color-main2: $color2;
+$color-alt: $color3;
+$color-alt2: $color4;
+
+$color-link: $color-main;
+$color-link-hover: $color-main2;
+
 
 // fonts
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700);
 $font-heading: 'Ubuntu', Arial, serif;
 $font-body: 'Raleway', Arial, sans-serif;
-$color-heading: #444;
+$color-heading: #333;
 $color-body: #666;
 
 // configs
-$sidebar-width: 600px;
-$color-main: $color1;
+$sidebar-width: 350px;
+$sidebar-position: left; 					//left or right only
+$sidebar-color: rgba(#000, .8); 			//If want combine with background image, put 'rgba' format: rgba($color-main, 0.6)
+$sidebar-img: '/img/bg-city.jpg'; 				//url to bg image, base64 or 'false' to disable

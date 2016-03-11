@@ -1,39 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Virgo - A Jekyll Template</title>
+---
+layout: clean
+---
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link rel="stylesheet" href="/css/main.min.css">
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-		
-		<aside class="sidebar">Lateral</aside>
-		<div class="content">
-
-		<main class="container-fluid">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<h1><a href="#">Lorem ipsum Aute aliqua aliquip laboris irure minim velit deserunt id officia.</a></h1>
-					<p><a href="#">Desde que eu comecei a escrever nesse blog e postar o conteúdo em redes sociais eu recebi um monte de feedback positivo. Até escrevi um post incentivando as pessoas a escreverem. É incrível o quanto as pessoas se identificam com certas coisas que eu escrevo e eu me sinto muito.</a></p>
-					<time datetime="2016-03-20">20 de março de 2016</time> em <a href="#" class="label label-virgo">Lorem</a> <a href="#" class="label label-virgo">Ipsum</a> <a href="#" class="label label-virgo">Irune</a>
-				</div>
-			</div>
-		</main>
-
-
-		</div>
-
-		<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	</body>
-</html>
+{% for post in site.posts limit 15 %}
+<article class="post-card">
+	<div class="post-content">
+		<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+		<p class="resume">{{ post.content | strip_html | truncatewords:50}}</p>
+	</div>
+	<div class="meta">
+		<time datetime="{{ post.date | date: "%Y-%m-%d" }}" class="published-when">
+			{% assign day = post.date | date: "%-d" %}
+			{% assign m = post.date | date: "%-m" %}
+			{% case m %}
+			{% when '1' %}{% assign month = 'Janeiro' %}
+			{% when '2' %}{% assign month = 'Fevereiro' %}
+			{% when '3' %}{% assign month = 'Março' %}
+			{% when '4' %}{% assign month = 'Abril' %}
+			{% when '5' %}{% assign month = 'Maio' %}
+			{% when '6' %}{% assign month = 'Junho' %}
+			{% when '7' %}{% assign month = 'Julho' %}
+			{% when '8' %}{% assign month = 'Agosto' %}
+			{% when '9' %}{% assign month = 'Setembro' %}
+			{% when '10' %}{% assign month = 'Outubro' %}
+			{% when '11' %}{% assign month = 'Novembro' %}
+			{% when '12' %}{% assign month = 'Dezembro' %}
+			{% endcase %}
+			{% assign year = post.date | date: "%Y" %}
+			{{ day }} de {{ month }} de {{ year }}
+		</time> em 
+		<a href="#">#Lorem</a> <a href="#">#Ipsum</a> <a href="#">#Irune</a>
+		<a href="{{ post.url | prepend: site.baseurl }}" class="read-more">continue lendo</a>
+	</div>
+</article>
+{% endfor %}
