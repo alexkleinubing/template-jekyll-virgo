@@ -1,0 +1,23 @@
+{% if post %}
+	{% assign tags = post.tags %}
+{% else %}
+	{% assign tags = page.tags %}
+{% endif %}
+{% if include.prepend %}
+	{% assign prepend = include.prepend %}
+{% else %}
+	{% assign prepend = 'em ' %}
+{% endif %}
+{% if include.implode %}
+	{% assign divider = include.implode %}
+{% else %}
+	{% assign divider = ', ' %}
+{% endif %}
+{% if include.append %}
+	{% assign append = include.append %}
+{% else %}
+	{% assign append = '.' %}
+{% endif %}
+{% if tags.size > 0 %}
+	{{ prepend }}{% for tag in tags %}<a href="/tags/#{{tag|slugize}}">#{{tag}}</a>{% unless forloop.last %}{{ divider }}{% endunless %}{% endfor %}{{ append }}
+{% endif %}

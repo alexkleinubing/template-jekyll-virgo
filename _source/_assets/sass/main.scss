@@ -2,6 +2,11 @@
 @import 'animations';
 @import 'base';
 @import 'widgets';
+@import '../css/highlighter.css';
+
+.float-right {
+	float: right;
+}
 
 .sidebar {
 	width: $sidebar-width;
@@ -90,7 +95,6 @@ footer {
 		color: #AAA;
 		font-size: 1.2rem;
 		.read-more {
-			float: right;
 			font-size: 1.4rem;
 		}
 	}

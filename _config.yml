@@ -1,20 +1,49 @@
 # Site settings
-title:            Your awesome title
-email:            your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title:            Virgo
+description:      A Jekyll template
+url:              "http://yourdomain.com"
 baseurl:          "" # the subpath of your site, e.g. /blog/
-url:              "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+
+google_analytics: ""
+
+# Author settings
+author:           Alex Kleinubing
+email:            alex.kleinubing@gmail.com
+social:
+  facebook:       /jekyllrb
+  instagram:      jekyllrb
+  linkedin:       jekyllrb
+  github:         jekyll
+  twitter:        jekyllrb
+
+avatar:           ""
+
+# Defaults
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Alex Kleinubing"
+
+
 
 # General options
 comments:         true
 disqus-shortname: jekylltemplates
 
 # Build settings
+permalink:        ":categories/:title"
+paginate:         10
+paginate_path:    "/page/:num/"
 source:           _source
 destination:      _site
+highlighter:      pygments
 markdown:         kramdown
+kramdown:
+  input:          GFM #Github markdown style
+
+repo:             http://github.com/nandomoreirame/nandomoreirame.github.io
+
+exclude:          ["node_modules", ".sass-cache"]

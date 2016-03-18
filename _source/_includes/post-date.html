@@ -1,0 +1,23 @@
+{% if post %}
+	{% assign date = post.date %}
+{% else %}
+	{% assign date = page.date %}
+{% endif %}
+{% assign day = date | date: "%-d" %}
+{% assign m = date | date: "%-m" %}
+{% case m %}
+	{% when '1' %}{% assign month = 'Janeiro' %}
+	{% when '2' %}{% assign month = 'Fevereiro' %}
+	{% when '3' %}{% assign month = 'Março' %}
+	{% when '4' %}{% assign month = 'Abril' %}
+	{% when '5' %}{% assign month = 'Maio' %}
+	{% when '6' %}{% assign month = 'Junho' %}
+	{% when '7' %}{% assign month = 'Julho' %}
+	{% when '8' %}{% assign month = 'Agosto' %}
+	{% when '9' %}{% assign month = 'Setembro' %}
+	{% when '10' %}{% assign month = 'Outubro' %}
+	{% when '11' %}{% assign month = 'Novembro' %}
+	{% when '12' %}{% assign month = 'Dezembro' %}
+{% endcase %}
+{% assign year = date | date: "%Y" %}
+{{ day }} de {{ month }} de {{ year }}
